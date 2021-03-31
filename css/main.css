@@ -1,9 +1,181 @@
 html {
   box-sizing: border-box;
-  font-family: 'Merriweather', serif;
+  font-family: Merriweather, serif;
   line-height: 1.5;
+  font-style: italic;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
+
+h1 {
+  font-weight: lighter;
+  font-size: 1.8rem;
+
+  grid-column: 1;
+  grid-row: 2;
+  margin-bottom: 1.53rem;
+}
+
+.bigpicture p {
+  color: white;
+  grid-column: 1/ 3;
+  grid-row: 2;
+  z-index:1;
+  font-weight: lighter;
+  margin: 1rem;
+}
+
+h2 {
+  color: white;
+  grid-column: 1/ 3;
+  grid-row: 2;
+  z-index:1;
+  font-weight: lighter;
+  padding-bottom: 10rem;
+  margin-left: 1rem;
+}
+
+.resize {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 40em) {
+
+  body {
+
+    /*desktop size grid
+    remove padding and margin and display grid cuz it's default*/
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "header"
+    "main main main"
+  }
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+.banner {
+  display: grid;
+}
+
+.columns {
+  display: flex;
+  padding: 0rem;
+}
+
+.heading2 {
+  font-size: 1.8rem;
+  margin: 0 1rem;
+}
+
+dt {
+  margin:0 1rem;
+}
+
+.bigpicture {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4rem;
+}
+
+.bigpicture img {
+  grid-column: 1/ -1;
+  grid-row: 1/ 6;
+}
+
+.banner img {
+  grid-column: 1/ -1;
+  grid-row: 1/ -1;
+  border-left: 0;
+}
+
+.figure {
+  margin: 0.05rem;
+  padding:1rem;
+}
+
+.second {
+  width: 100px;
+  height: 375px;
+  padding: 1.5rem;
+}
+
+.first {
+  padding-right: 0rem;
+  width: 100px;
+  height: 375px;
+  padding: 1.5rem;
+}
+
+.third {
+  width: 100px;
+  height: 375px;
+  padding: 1.5rem;
+}
+
+.threecolumn {
+  float: left;
+  width: 33.33%;
+}
+.column img {
+  display: flex;
+  display: block;
+  max-width:230px;
+  max-height:95px;
+  width: auto;
+  height: auto;
+}
+/*
+.one {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-self: center;
+}
+
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-self: center;
+}
+
+.three {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-self: center;
+}
+*/
+/*
+main {
+  display: grid;
+  grid-template-columns: repeat(3,35%);
+  gap:.75rem;
+}
+
+.heading2 {
+  font-weight: bold;
+  font-size:1.5rem;
+}
+
+.big-picture {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+*/
